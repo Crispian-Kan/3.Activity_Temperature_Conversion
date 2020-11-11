@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Project_temperature_conversion</string>
-    <string name="TextView">顯示溫度:</string>
-    <string name="RadioButton">攝氏</string>
-    <string name="RadioButton1">華氏</string>
-    <string name="charC">˚C</string>
-    <string name="charF">˚F</string>
+    <string name="input_degree">輸入溫度:</string>
+    <string name="Radio_C">攝氏(˚C)</string>
+    <string name="Radio_F">華氏(˚F)</string>
+    <string name="outC">˚C</string>
+    <string name="outF">˚F</string>
+    <string name="title">溫度轉換</string>
 </resources>

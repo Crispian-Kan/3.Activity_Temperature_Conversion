@@ -7,79 +7,84 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:gravity="center"
+        android:text="@string/title"
+        android:textColor="#051EAA"
+        android:textSize="30sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="115dp"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/str"
-            android:layout_width="200dp"
-            android:layout_height="58dp"
+            android:id="@+id/input"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
             android:layout_weight="0.76"
-            android:text="@string/TextView"
-            android:textColor="#232326" />
-
-        <RadioGroup
-            android:id="@+id/unit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <RadioButton
-                android:id="@+id/unitC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/RadioButton" />
-
-            <RadioButton
-                android:id="@+id/unitF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/RadioButton1" />
-        </RadioGroup>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            android:gravity="center|left"
+            android:text="@string/input_degree"
+            android:textColor="#232326"
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/value"
-            android:layout_width="match_parent"
+            android:layout_width="138dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="numberSigned|numberDecimal"
             android:maxLength="3" />
 
+        <RadioGroup
+            android:id="@+id/option"
+            android:layout_width="41dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/degreeC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Radio_C" />
+
+            <RadioButton
+                android:id="@+id/degreeF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Radio_F" />
+        </RadioGroup>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="268dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/degC"
+            android:id="@+id/outC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/charC"
+            android:text="@string/outC"
             android:textColor="#000000"
             android:textSize="24sp"
             tools:text="\u2103" />
 
         <TextView
-            android:id="@+id/degF"
+            android:id="@+id/outF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/charF"
+            android:text="@string/outF"
             android:textColor="#000000"
             android:textSize="24sp"
             tools:text="\u2109" />

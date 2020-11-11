@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity
         implements RadioGroup.OnCheckedChangeListener, TextWatcher {
 
 
-    RadioGroup unit;
+    RadioGroup option;
     EditText value;
 
 
@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        unit = (RadioGroup) findViewById(R.id.unit);
-        unit.setOnCheckedChangeListener(this);
+        option = (RadioGroup) findViewById(R.id.option);
+        option.setOnCheckedChangeListener(this);
 
         value = (EditText) findViewById(R.id.value);
         value.addTextChangedListener(this);
@@ -52,12 +52,12 @@ public class MainActivity extends AppCompatActivity
 
 
     protected void calc() {
-        TextView degF = (TextView) findViewById(R.id.degF);
-        TextView degC = (TextView) findViewById(R.id.degC);
+        TextView outF = (TextView) findViewById(R.id.outF);
+        TextView outC = (TextView) findViewById(R.id.outC);
 
         double f=0,c = 0;  //儲存溫度換算結果
 
-        if (unit.getCheckedRadioButtonId() == R.id.unitF) {
+        if (option.getCheckedRadioButtonId() == R.id.degreeF) {
 
             if(!value.getText().toString().equals("")){           //如果輸入值有輸入時進行以下換算
                 f = Double.parseDouble(value.getText().toString());
@@ -74,10 +74,10 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        degC.setText(String.format("%.1f", c) + getResources().getString(R.string.charC));
+        outC.setText(String.format("%.1f", c) + getResources().getString(R.string.outC));
 
 
-        degF.setText(String.format("%.1f", f) + getResources().getString(R.string.charF));
+        outF.setText(String.format("%.1f", f) + getResources().getString(R.string.outF));
     }
 
 }
